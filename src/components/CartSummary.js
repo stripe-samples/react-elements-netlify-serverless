@@ -36,7 +36,7 @@ const CartSummary = () => {
         setLoading(false);
       });
 
-    redirectToCheckout({ sessionId });
+    redirectToCheckout(sessionId);
   };
 
   return (
