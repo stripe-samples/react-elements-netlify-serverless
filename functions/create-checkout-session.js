@@ -5,7 +5,10 @@
  * @see https://stripe.com/docs/payments/checkout/one-time
  */
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2020-03-02',
+  maxNetworkRetries: 2,
+});
 const validateCartItems = require('use-shopping-cart/src/serverUtil')
   .validateCartItems;
 
