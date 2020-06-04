@@ -16,7 +16,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "stripe": "^8.49.0",
+    "stripe": "^8.56.0",
     "use-shopping-cart": "^2.0.0"
   },
   "scripts": {

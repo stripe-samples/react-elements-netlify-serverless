@@ -34,10 +34,9 @@ ReactDOM.render(
           Based on an{' '}
           <a href="https://www.learnwithjason.dev/add-apple-pay-google-pay-to-jamstack-sites">
             episode of <em>Learn With Jason</em>
-          </a>{' '}
-          ·<a href="#EGGHEAD-link">watch the video course</a> ·
-          <a href="#TKTK-tutorial-link">read the tutorial</a> ·
-          <a href="https://github.com/stripe-samples/react-elements-netlify-serverless">
+          </a>
+          {' · '}<a href="https://www.netlify.com/blog/2020/05/21/learn-to-add-apple-pay-and-google-pay-to-react-websites/">read the tutorial</a>
+          {' · '}<a href="https://github.com/stripe-samples/react-elements-netlify-serverless">
             source code
           </a>
         </p>
