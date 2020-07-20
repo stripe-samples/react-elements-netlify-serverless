@@ -38,7 +38,6 @@ exports.handler = async (event) => {
       amount,
       currency: 'usd',
       ...paymentDetails,
-      confirm: true,
       // We are using the metadata to track which items were purchased.
       // We can access this meatadata in our webhook handler to then handle
       // the fulfillment process.
