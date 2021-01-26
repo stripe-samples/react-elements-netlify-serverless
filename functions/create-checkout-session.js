@@ -29,6 +29,7 @@ exports.handler = async (event) => {
     const line_items = validateCartItems(inventory, cartItems);
 
     const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
       payment_method_types: ['card'],
       billing_address_collection: 'auto',
       shipping_address_collection: {
@@ -46,11 +47,15 @@ exports.handler = async (event) => {
       line_items: [
         ...line_items,
         {
-          name: 'Shipping fee',
-          description: 'Handling and shipping fee for global delivery',
+          price_data: {
+            unit_amount: 350,
+            currency: 'USD',
+            product_data: {
+              name: 'Shipping fee',
+              description: 'Handling and shipping fee for global delivery',
+            },
+          },
           quantity: 1,
-          amount: 350,
-          currency: 'USD',
         },
       ],
       // We are using the metadata to track which items were purchased.

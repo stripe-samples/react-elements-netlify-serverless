@@ -30,7 +30,8 @@ exports.handler = async (event) => {
 
     const line_items = validateCartItems(inventory, cartItems);
     const amount = line_items.reduce(
-      (sum, { amount, quantity }) => sum + amount * quantity,
+      (sum, { price_data: { unit_amount }, quantity }) =>
+        sum + unit_amount * quantity,
       350 // Shipping fee
     );
 
