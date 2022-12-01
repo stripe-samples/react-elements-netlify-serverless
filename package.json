@@ -14,7 +14,7 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^6.4.4",
     "react-scripts": "3.4.1",
     "stripe": "^8.56.0",
     "use-shopping-cart": "^2.3.0"
